@@ -7,27 +7,57 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <ul class="navbar">
-        <li><a href="#events">Events</a></li>
-        <li><a href="#teams">Teams</a></li>
-        <li><a href="#rules">Rules</a></li>
-        <li><a href="#about">About</a></li>
-        <li class="account">
-        <ul>
-        <li><a href="#login">Log in</a></li>
-        <li><a href="#register">Register</a></li>
-        <li>
-            <svg width="70" height="70">
-                <mask id="svgmaskcircle">
-                    <circle fill="#ffffff" cx="35" cy="35" r="35"></circle>
-                </mask>
-                <a href="#profile">
-                    <image width="70" height="70" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../res/Portrait_Placeholder.png" mask="url(#svgmaskcircle)"></image>
-                </a>
-            </svg>
-        </li>
-        </ul>
-        </li>
-    </ul>
+    <div id="navbar">
+        <nav>
+            <input type="checkbox" id="nav" /><label for="nav"></label>
+            <ul>
+                <li><a href="main.html">Championships</a></li>
+                <li><a href="teams.html">Teams</a></li>
+                <li><a href="#">Rules</a></li>
+                <li><a href="#">About</a></li>
+                <li class="account">
+                    <ul>
+                        <li><a href="#">Log in</a></li>
+                        <li><a href="#">Register</a></li>
+                        <li>
+                            <svg>
+                                <mask id="svgmaskcircle">
+                                    <circle fill="#ffffff" cx="35" cy="35" r="35"></circle>
+                                </mask>
+                                <a href="#">
+                                    <image width="70" height="70" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../res/Portrait_Placeholder.png" mask="url(#svgmaskcircle)"></image>
+                                </a>
+                            </svg>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Obsah stranky -->
+    <h1>Active championships</h1>
+    <div class="events">
+        <div class="event_card">
+            <div class="container">
+                <h4><b>GT3 Endurance championship</b></h4>
+                <p>Architect & Engineer</p>
+            </div>
+            <img src="res/silverstone.png">
+        </div>
+        <div class="event_card">
+            <div class="container">
+                <h4><b>Porshe Cup championship</b></h4>
+                <p>Architect & Engineer</p>
+            </div>
+            <img src="res/Portrait_Placeholder.png">
+        </div>
+        <div class="event_card">
+            <div class="container">
+                <h4><b>F1 championship</b></h4>
+                <p>Architect & Engineer</p>
+            </div>
+            <img src="res/spa.png">
+        </div>
+    </div>
 </body>
 </html>
