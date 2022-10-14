@@ -170,13 +170,12 @@ label {
 }
 
 .rules img {
-    float:left;
     margin:2px;
     border-radius:7px;
     display: block;
-    max-width:90%;
+    max-width:40%;
     height:auto;
-    width:90%;
+    width:40%;
 }
 
 @media screen and (max-width: 700px) {
@@ -290,7 +289,6 @@ label {
     }
 
     .rules img {
-        float:left;
         margin:2px;
         border-radius:7px;
         display: block;
