@@ -45,7 +45,6 @@ label {
 }
 
 #navbar .account svg {
-    display: none;
     width: 70px;
     height: 70px;
     margin: 14px 16px;
@@ -70,6 +69,7 @@ label {
     /* Add shadows to create the "card" effect */
     display: flex;
     flex-wrap: wrap;
+    padding: 15px 0;
     margin: 15px 0;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
@@ -78,7 +78,6 @@ label {
     align-items: flex-start;
     align-content: center;
     background-color: lightskyblue;
-
 }
 
 .event_card img {
@@ -103,7 +102,7 @@ label {
     max-height: 100%;
     width: auto;
     height: auto;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .right_side {
@@ -143,7 +142,7 @@ label {
 
 .button:active {
     position:relative;
-    bottom:49px;
+    bottom:9px;
 }
 
 .rules > ol {
@@ -374,5 +373,9 @@ table.teams_table tr:hover > td {
     .button {
         position: relative;
         bottom: 50px;
+    }
+
+    .button:active {
+        bottom:49px;
     }
 }
