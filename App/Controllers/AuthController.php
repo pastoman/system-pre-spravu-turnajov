@@ -2,9 +2,11 @@
 
 namespace App\Controllers;
 
+use App\Auth\Auth;
 use App\Config\Configuration;
 use App\Core\AControllerBase;
 use App\Core\Responses\Response;
+use App\Models\User;
 
 /**
  * Class AuthController
@@ -31,7 +33,7 @@ class AuthController extends AControllerBase
         $formData = $this->app->getRequest()->getPost();
         $logged = null;
         if (isset($formData['submit'])) {
-            $logged = $this->app->getAuth()->login($formData['login'], $formData['password']);
+            $logged = $this->app->getAuth()->login($formData['username'], $formData['password']);
             if ($logged) {
                 return $this->redirect('?');
             }
@@ -53,6 +55,20 @@ class AuthController extends AControllerBase
 
     public function register(): Response
     {
-        return $this->html();
+        $formData = $this->app->getRequest()->getPost();
+        $registered = null;
+        if (isset($formData['submit'])) {
+            $user = new User();
+            $user->username = $formData['username'];
+            $user->email = $formData['email'];
+            $user->hash = $this->app->getAuth()->generatePassHash($formData['password']);
+            $user->save();
+//            if ($logged) {
+//                return $this->redirect('?');
+//            }
+        }
+
+        $data = ($registered === false ? ['message' => 'This account is already registered!'] : []);
+        return $this->redirect(Configuration::LOGIN_URL);
     }
 }
