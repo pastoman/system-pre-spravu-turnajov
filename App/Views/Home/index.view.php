@@ -4,37 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main page - Simulator racing championship manager</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/public/css/styl.css">
 </head>
 <body>
-    <div id="navbar">
-        <nav>
-            <input type="checkbox" id="nav"><label for="nav"></label>
-            <ul>
-                <li><a href="main.html">Championships</a></li>
-                <li><a href="teams.html">Teams</a></li>
-                <li><a href="rules.html">Rules</a></li>
-                <li><a href="#">About</a></li>
-                <li class="account">
-                    <ul>
-                        <li><a href="#">Log in</a></li>
-                        <li><a href="#">Register</a></li>
-                        <li>
-                            <svg>
-                                <mask id="svgmaskcircle">
-                                    <circle fill="#ffffff" cx="35" cy="35" r="35"></circle>
-                                </mask>
-                                <a href="#">
-                                    <image width="70" height="70" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../res/Portrait_Placeholder.png" mask="url(#svgmaskcircle)"></image>
-                                </a>
-                            </svg>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    <!-- Obsah stranky -->
     <h1>Active championships</h1>
     <div class="events">
         <div class="event_card">
@@ -43,7 +15,7 @@
                 <p>The GT World Challenge Europe Endurance Cup reestablishes several elements of the former FIA GT Championship, with three hour endurance races held on European circuits such as Monza and Silverstone, as well as a continuation of the Spa 24 Hours. The races feature five classes derived from the FIA's GT3, GT4, and Supersport regulations, with the GT3 cars divided into a class for professional driver line-ups (GT3 Pro), a class for a mixed team of professional and amateurs (GT3 Pro-Am), and a class for gentleman drivers who use cars at least one year old (GT3 Am). The FIA's ranking system for drivers is utilized in determining what class each entry is eligible for. The GT4 category remained its own class. The GT World Challenge Europe Endurance Cup reestablishes several elements of the former FIA GT Championship, with three hour endurance races held on European circuits such as Monza and Silverstone, as well as a continuation of the Spa 24 Hours. The races feature five classes derived from the FIA's GT3, GT4, and Supersport regulations, with the GT3 cars divided into a class for professional driver line-ups (GT3 Pro), a class for a mixed team of professional and amateurs (GT3 Pro-Am), and a class for gentleman drivers who use cars at least one year old (GT3 Am). The FIA's ranking system for drivers is utilized in determining what class each entry is eligible for. The GT4 category remained its own class. The GT World Challenge Europe Endurance Cup reestablishes several elements of the former FIA GT Championship, with three hour endurance races held on European circuits such as Monza and Silverstone, as well as a continuation of the Spa 24 Hours. The races feature five classes derived from the FIA's GT3, GT4, and Supersport regulations, with the GT3 cars divided into a class for professional driver line-ups (GT3 Pro), a class for a mixed team of professional and amateurs (GT3 Pro-Am), and a class for gentleman drivers who use cars at least one year old (GT3 Am). The FIA's ranking system for drivers is utilized in determining what class each entry is eligible for. The GT4 category remained its own class. The GT World Challenge Europe Endurance Cup reestablishes several elements of the former FIA GT Championship, with three hour endurance races held on European circuits such as Monza and Silverstone, as well as a continuation of the Spa 24 Hours. The races feature five classes derived from the FIA's GT3, GT4, and Supersport regulations, with the GT3 cars divided into a class for professional driver line-ups (GT3 Pro), a class for a mixed team of professional and amateurs (GT3 Pro-Am), and a class for gentleman drivers who use cars at least one year old (GT3 Am). The FIA's ranking system for drivers is utilized in determining what class each entry is eligible for. The GT4 category remained its own class. The GT World Challenge Europe Endurance Cup reestablishes several elements of the former FIA GT Championship, with three hour endurance races held on European circuits such as Monza and Silverstone, as well as a continuation of the Spa 24 Hours. The races feature five classes derived from the FIA's GT3, GT4, and Supersport regulations, with the GT3 cars divided into a class for professional driver line-ups (GT3 Pro), a class for a mixed team of professional and amateurs (GT3 Pro-Am), and a class for gentleman drivers who use cars at least one year old (GT3 Am). The FIA's ranking system for drivers is utilized in determining what class each entry is eligible for. The GT4 category remained its own class. The GT World Challenge Europe Endurance Cup reestablishes several elements of the former FIA GT Championship, with three hour endurance races held on European circuits such as Monza and Silverstone, as well as a continuation of the Spa 24 Hours. The races feature five classes derived from the FIA's GT3, GT4, and Supersport regulations, with the GT3 cars divided into a class for professional driver line-ups (GT3 Pro), a class for a mixed team of professional and amateurs (GT3 Pro-Am), and a class for gentleman drivers who use cars at least one year old (GT3 Am). The FIA's ranking system for drivers is utilized in determining what class each entry is eligible for. The GT4 category remained its own class.</p>
             </div>
             <div class="right_side">
-                <img src="res/GT_world.png" alt="Silverstone circuit">
+                <img src="/public/images/GT_world.png" alt="Silverstone circuit">
                 <a href="#" class="button">View ></a>
             </div>
         </div>
@@ -55,7 +27,7 @@
                     Porsche Supercup drivers compete in identical Porsche 911 GT3 Cup cars. On average, 24 race cars take part in each race. Most circuits visited by the series are European, although circuits in Bahrain, United Arab Emirates, the United States and Mexico have been included in the calendar as well.</p>
             </div>
             <div class="right_side">
-                <img src="res/Porsche_supercap.jpg" alt="placeholder">
+                <img src="/public/images/Porsche_supercap.jpg" alt="placeholder">
                 <a href="#" class="button">View ></a>
             </div>
         </div>
@@ -65,7 +37,7 @@
                 <p>Formula One (also known as Formula 1 or F1) is the highest class of international racing for open-wheel single-seater formula racing cars sanctioned by the Fédération Internationale de l'Automobile (FIA). The World Drivers' Championship, which became the FIA Formula One World Championship in 1981, has been one of the premier forms of racing around the world since its inaugural season in 1950. The word formula in the name refers to the set of rules to which all participants' cars must conform. A Formula One season consists of a series of races, known as Grands Prix, which take place worldwide on both purpose-built circuits and closed public roads.</p>
             </div>
             <div class="right_side">
-                <img src="res/f1.jpg" alt="Circuit de Spa-Francorchamps">
+                <img src="/public/images/f1.jpg" alt="Circuit de Spa-Francorchamps">
                 <a href="#" class="button">View ></a>
             </div>
         </div>

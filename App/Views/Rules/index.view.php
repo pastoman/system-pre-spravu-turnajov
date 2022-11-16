@@ -4,37 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Main page - Simulator racing championship manager</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../../../public/css/styl.css">
 </head>
 <body>
-<div id="navbar">
-  <nav>
-    <input type="checkbox" id="nav"><label for="nav"></label>
-    <ul>
-      <li><a href="main.html">Championships</a></li>
-      <li><a href="teams.html">Teams</a></li>
-      <li><a href="rules.html">Rules</a></li>
-      <li><a href="#">About</a></li>
-      <li class="account">
-        <ul>
-          <li><a href="#">Log in</a></li>
-          <li><a href="#">Register</a></li>
-          <li>
-            <svg>
-              <mask id="svgmaskcircle">
-                <circle fill="#ffffff" cx="35" cy="35" r="35"></circle>
-              </mask>
-              <a href="#">
-                <image width="70" height="70" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../res/Portrait_Placeholder.png" mask="url(#svgmaskcircle)"></image>
-              </a>
-            </svg>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
-</div>
-<!-- Obsah stranky -->
 <div class="rules">
   <ol>
     <li>
@@ -265,19 +237,19 @@
           <ol>
             <li>
               <span>The attacking rider (yellow car) is more than half the car next to the defender/opponent (red car). <br>The attacker is at the apex with more than half of his car next to the defender (red car). The attacker thus has the right to a racing track, and the collision at the apex is the fault of the defender.<br></span>
-              <img src="res/overtake1.png" alt="The attacking rider (yellow car) is more than half the car next to the defender/opponent (red car)">
+              <img src="../../../public/images/overtake1.png" alt="The attacking rider (yellow car) is more than half the car next to the defender/opponent (red car)">
             </li>
             <li>
               <span>The attacking rider (yellow car) is less than half a car next to the defender/opponent (red car). <br>The attacker only has the part of the car near the opponent's rear wheel on the apex. Thus, the defender has the right to a racing track, and the collision on the apex is the attacker's fault.<br></span>
-              <img src="res/overtake2.png" alt="The attacking rider (yellow car) is less than half a car next to the defender/opponent (red car)">
+              <img src="../../../public/images/overtake2.png" alt="The attacking rider (yellow car) is less than half a car next to the defender/opponent (red car)">
             </li>
             <li>
               <span>The attacking rider (yellow car) is roughly half-and-half with the defender/opponent (red car). <br>The attacker has his front wheels on the apex before the rear wheels of the defender. Both riders thus have the right to the racing track. If a collision occurs between riders, they are both mutually to blame. In this case, a racing incident may occur in the decision-making process regarding the assessment of guilt.<br></span>
-              <img src="res/overtake3.png" alt="The attacking rider (yellow car) is roughly half-and-half with the defender/opponent (red car)">
+              <img src="../../../public/images/overtake3.png" alt="The attacking rider (yellow car) is roughly half-and-half with the defender/opponent (red car)">
             </li>
             <li>
               <span>Side by Side<br>If opponents enter a turn lap by lap, next to each other, both must choose to choose such a track to leave the inner or outer track free for their opponent.<br></span>
-              <img src="res/overtake4.png" alt="Side by Side">
+              <img src="../../../public/images/overtake4.png" alt="Side by Side">
             </li>
           </ol>
         </li>

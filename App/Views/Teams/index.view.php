@@ -4,37 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teams - Simulator racing championship manager</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../../public/css/styl.css">
 </head>
 <body>
-    <div id="navbar">
-        <nav>
-            <input type="checkbox" id="nav"><label for="nav"></label>
-            <ul>
-                <li><a href="main.html">Championships</a></li>
-                <li><a href="teams.html">Teams</a></li>
-                <li><a href="rules.html">Rules</a></li>
-                <li><a href="#">About</a></li>
-                <li class="account">
-                    <ul>
-                        <li><a href="#">Log in</a></li>
-                        <li><a href="#">Register</a></li>
-                        <li>
-                            <svg>
-                                <mask id="svgmaskcircle">
-                                    <circle fill="#ffffff" cx="35" cy="35" r="35"></circle>
-                                </mask>
-                                <a href="#">
-                                    <image width="70" height="70" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../res/Portrait_Placeholder.png" mask="url(#svgmaskcircle)"></image>
-                                </a>
-                            </svg>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    <!-- Obsah stranky -->
     <div class="teams">
         <table class="teams_table">
             <tr>
