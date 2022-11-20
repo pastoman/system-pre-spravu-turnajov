@@ -3,7 +3,7 @@
 /** @var \App\Core\IAuthenticator $auth */
 ?>
 <!DOCTYPE html>
-<html lang="sk">
+<html lang="en">
 <head>
     <title><?= \App\Config\Configuration::APP_NAME ?></title>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
