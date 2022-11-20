@@ -117,6 +117,7 @@ h1 {
     justify-content: space-between;
 }
 
+
 .button {
     position: relative;
     bottom: 10px;
@@ -136,6 +137,21 @@ h1 {
     text-shadow:0 1px 0 steelblue;
 }
 
+.button-team {
+    position: inherit;
+    text-align: center;
+    width: 150px;
+    margin-bottom: 5px;
+
+}
+
+.button-small {
+    position: inherit;
+    text-align: center;
+    width: 50px;
+    margin-bottom: 5px;
+}
+
 .button:hover {
     background: darkblue linear-gradient(to bottom, darkblue 5%, blue 100%);
 }
@@ -143,6 +159,11 @@ h1 {
 .button:active {
     position:relative;
     bottom:9px;
+}
+
+.button-team:active {
+    position: relative;
+    bottom: 1px;
 }
 
 .rules > ol {
@@ -375,7 +396,26 @@ table.teams_table tr:hover > td {
         bottom: 50px;
     }
 
+    .button-team {
+        position: inherit;
+        text-align: center;
+        width: 150px;
+        margin-bottom: 5px;
+    }
+
+    .button-small {
+        position: inherit;
+        text-align: center;
+        width: 50px;
+        margin-bottom: 5px;
+    }
+
     .button:active {
         bottom:49px;
+    }
+
+    .button-team:active {
+        position: relative;
+        bottom: 1px;
     }
 }

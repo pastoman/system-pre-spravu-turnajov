@@ -2,6 +2,8 @@
 
 namespace App\Core;
 
+use App\Models\User;
+
 /**
  * Interface IAuthenticator
  * Interface for authentication
@@ -37,9 +39,9 @@ interface IAuthenticator
 
     /**
      * Return a context of logged user, e.g. user class instance
-     * @return mixed
+     * @return User
      */
-    function getLoggedUserContext(): mixed;
+    function getLoggedUserContext(): User;
 
     /**
      * Return, if a user is logged or not

@@ -6,6 +6,7 @@ use App\Auth\Auth;
 use App\Config\Configuration;
 use App\Core\AControllerBase;
 use App\Core\Responses\Response;
+use App\Models\Team;
 use App\Models\User;
 
 /**
@@ -58,12 +59,13 @@ class AuthController extends AControllerBase
         $formData = $this->app->getRequest()->getPost();
         $registered = null;
         if (isset($formData['submit'])) {
-            $registered = $this->app->getAuth()->register($formData['username'], $formData['email'], $formData['password']);
+            $registered = $this->app->getAuth()->register($formData['username'], $formData['email'],
+                $formData['name'], $formData['surname'], $formData['password']);
             if ($registered) {
                 return $this->redirect('?');
             }
         }
-        $data = ($registered === false ? ['message' => 'This account is already registered!'] : []);
+        $data = ($registered === false ? ['message' => 'This account is already registered!', 'form' => $formData] : []);
         return $this->html($data);
     }
 }

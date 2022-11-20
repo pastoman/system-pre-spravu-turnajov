@@ -10,4 +10,7 @@ class User extends Model
     public $username;
     public $email;
     public $hash;
+    public $name;
+    public $surname;
+    public $team;
 }

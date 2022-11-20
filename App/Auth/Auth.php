@@ -40,14 +40,14 @@ class Auth implements IAuthenticator
         $users =  User::getAll();
         foreach ($users as $user) {
             if ($login == $user->username && password_verify($password, $user->hash)) {
-                $_SESSION['user'] = $user->username;
+                $_SESSION['user'] = $user->id;
                 return true;
             }
         }
         return false;
     }
 
-    public function register($login, $email, $password): bool
+    public function register($login, $email, $name, $surname, $password): bool
     {
         $users = User::getAll("username = '$login'");
         if (count($users) > 0) {
@@ -66,6 +66,8 @@ class Auth implements IAuthenticator
             $user = new User();
             $user->username = $login;
             $user->email = $email;
+            $user->name = $name;
+            $user->surname = $surname;
             $user->hash = $this->generatePassHash($password);
             $user->save();
             return true;
@@ -95,11 +97,11 @@ class Auth implements IAuthenticator
 
     /**
      * Get the context of the logged-in user
-     * @return string
+     * @return User
      */
-    function getLoggedUserContext(): mixed
+    function getLoggedUserContext(): User
     {
-        return null;
+        return User::getOne($_SESSION['user']);
     }
 
     /**

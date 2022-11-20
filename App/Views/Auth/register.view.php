@@ -14,20 +14,31 @@ $layout = 'auth';
                     <form class="form-register" method="post" action="<?= \App\Config\Configuration::REGISTER_URL ?>">
                         <div class="form-label-group mb-3">
                             <label for="login-register" class="form-label">Username</label>
-                            <input name="username" type="text" id="login-register" class="form-control" required
-                                   autofocus>
+                            <input name="username" type="text" id="login-register" class="form-control"
+                                   value="<?= @$data['form']['username']?>" required autofocus>
                         </div>
                         <div class="form-label-group mb-3">
                             <label for="email-register" class="form-label">Email</label>
                             <input name="email" type="email" id="email-register" class="form-control"
-                                   aria-describedby="emailHelpBlock" required>
+                                   aria-describedby="emailHelpBlock" value="<?= @$data['form']['email']?>" required>
                             <div id="emailHelpBlock" class="form-text">
                             </div>
                         </div>
                         <div class="form-label-group mb-3">
+                            <label for="name-register" class="form-label">Name</label>
+                            <input name="name" type="text" id="name-register" class="form-control"
+                                   value="<?= @$data['form']['name']?>" required>
+                        </div>
+                        <div class="form-label-group mb-3">
+                            <label for="surname-register" class="form-label">Surname</label>
+                            <input name="surname" type="text" id="surname-register" class="form-control"
+                                   value="<?= @$data['form']['surname']?>" required>
+                        </div>
+                        <div class="form-label-group mb-3">
                             <label for="password-register" class="form-label">Password</label>
                             <input name="password" type="password" id="password-register" class="form-control"
-                                   aria-describedby="passwordHelpBlock" required>
+                                   aria-describedby="passwordHelpBlock" value="<?= @$data['form']['password']?>"
+                                   required>
                             <div id="passwordHelpBlock" class="form-text">
                                 Your password must be 6-30 characters long and must contain at least one uppercase
                                 letter, at least one lowercase letter and at lest one number, and must not contain spaces.
