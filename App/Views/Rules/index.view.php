@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Main page - Simulator racing championship manager</title>
-  <link rel="stylesheet" href="../../../public/css/styl.css">
-</head>
-<body>
 <div class="rules">
   <ol>
     <li>
@@ -257,5 +248,3 @@
     </li>
   </ol>
 </div>
-</body>
-</html>
