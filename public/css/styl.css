@@ -17,7 +17,7 @@ h1 {
 }
 
 [type="checkbox"],
-label {
+#navbar label {
     display: none;
 }
 
@@ -257,7 +257,7 @@ table.teams_table tr:hover > td {
         display: none;
         border: 2px blue solid;
     }
-    label {
+    #navbar label {
         display: block;
         background: blue;
         width: 40px;
@@ -267,7 +267,7 @@ table.teams_table tr:hover > td {
         left: 20px;
         top: 10px;
     }
-    label:after {
+    #navbar label:after {
         content: '';
         display: block;
         width: 30px;

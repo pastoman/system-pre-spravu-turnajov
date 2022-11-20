@@ -58,17 +58,12 @@ class AuthController extends AControllerBase
         $formData = $this->app->getRequest()->getPost();
         $registered = null;
         if (isset($formData['submit'])) {
-            $user = new User();
-            $user->username = $formData['username'];
-            $user->email = $formData['email'];
-            $user->hash = $this->app->getAuth()->generatePassHash($formData['password']);
-            $user->save();
-//            if ($logged) {
-//                return $this->redirect('?');
-//            }
+            $registered = $this->app->getAuth()->register($formData['username'], $formData['email'], $formData['password']);
+            if ($registered) {
+                return $this->redirect('?');
+            }
         }
-
         $data = ($registered === false ? ['message' => 'This account is already registered!'] : []);
-        return $this->redirect(Configuration::LOGIN_URL);
+        return $this->html($data);
     }
 }

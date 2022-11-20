@@ -21,6 +21,13 @@ class Auth implements IAuthenticator
         session_start();
     }
 
+
+
+    function generatePassHash($password): string
+    {
+        return password_hash($password, PASSWORD_DEFAULT);
+    }
+
     /**
      * Verify, if the user is in DB and has his password is correct
      * @param $login
@@ -28,12 +35,6 @@ class Auth implements IAuthenticator
      * @return bool
      * @throws \Exception
      */
-
-    function generatePassHash($password): string
-    {
-        return password_hash($password, PASSWORD_DEFAULT);
-    }
-
     function login($login, $password): bool
     {
         $users =  User::getAll();
@@ -42,6 +43,32 @@ class Auth implements IAuthenticator
                 $_SESSION['user'] = $user->username;
                 return true;
             }
+        }
+        return false;
+    }
+
+    public function register($login, $email, $password): bool
+    {
+        $users = User::getAll("username = '$login'");
+        if (count($users) > 0) {
+            return false;
+        }
+        $dataValid = true;
+        $emaiCheck = preg_match('/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/', $email);
+        if (!$emaiCheck) {
+            $dataValid = false;
+        }
+        $passCheck = preg_match('/^(?=[^\nA-Z]*[A-Z])(?=[^\na-z]*[a-z])(?=[^\d\n]*\d)\S{6,30}$/', $password);
+        if (!$passCheck) {
+            $dataValid = false;
+        }
+        if ($dataValid) {
+            $user = new User();
+            $user->username = $login;
+            $user->email = $email;
+            $user->hash = $this->generatePassHash($password);
+            $user->save();
+            return true;
         }
         return false;
     }
@@ -63,8 +90,7 @@ class Auth implements IAuthenticator
      */
     function getLoggedUserName(): string
     {
-
-        return isset($_SESSION['user']) ? $_SESSION['user'] : throw new \Exception("User not logged in");
+        return $_SESSION['user'] ?? throw new \Exception("User not logged in");
     }
 
     /**
