@@ -62,6 +62,9 @@ class Auth implements IAuthenticator
         if (!$passCheck) {
             $dataValid = false;
         }
+        if (strlen($login) == 0 || strlen($name) == 0 || strlen($surname) == 0) {
+            $dataValid = false;
+        } 
         if ($dataValid) {
             $user = new User();
             $user->username = $login;
