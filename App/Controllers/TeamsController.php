@@ -17,7 +17,6 @@ class TeamsController extends AControllerBase
     public function index(): Response
     {
         $teams = Team::getAll();
-        /** @var Array $team */
         foreach ($teams as $team) {
             $members = User::getAll("team=$team->id");
             $team->no_members = count($members);
