@@ -30,7 +30,7 @@ class TeamsController extends AControllerBase
     {
         $formData = $this->app->getRequest()->getPost();
         $registered = null;
-        if (isset($formData['submit']) && $this->app->getAuth()->isLogged()) {
+        if (isset($formData['submit']) && $this->app->getAuth()->isLogged() && strlen($formPost['team-name']) > 0) {
             $teamName = $formData["team-name"];
             if (count(Team::getAll("name = '$teamName'")) > 0) {
                 $registered = false;
@@ -86,7 +86,7 @@ class TeamsController extends AControllerBase
     {
         $team = Team::getOne($this->app->getAuth()->getLoggedUserContext()->team);
         $formPost = $this->app->getRequest()->getPost();
-        if (isset($formPost['submit'])) {
+        if (isset($formPost['submit']) && strlen($formPost['team-name']) > 0) {
             $team->name = $formPost['team-name'];
             $team->save();
             return $this->redirect('?c=teams');
